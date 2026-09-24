@@ -18,6 +18,8 @@ Un solo archivo: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-deve
 
 ## Instalación
 
+**¿Usas Gemini?** Solo abre este enlace: [Gem i-am-not-a-developer](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). Sin copiar y pegar, sin iniciar sesión.
+
 **Lo más fácil: copia esta frase, pégala en Claude Code y pulsa Enter.** Claude hace la instalación por ti. Si te pide permiso, di que sí.
 
 ```
@@ -107,6 +109,8 @@ Conversaciones completas de sesiones reales: [ERR_CONNECTION_REFUSED](docs/examp
 ## Funciona con
 
 ### ChatGPT, Gemini, Grok (apps de chat)
+
+**¿Usas Gemini?** Solo abre este enlace: [Gem i-am-not-a-developer](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). Sin copiar y pegar, sin iniciar sesión.
 
 **1. Copia este texto.** En GitHub, el botón para copiar está arriba a la derecha del cuadro. (1,309 caracteres, cabe en todas las apps de abajo. El mismo texto: [`install/short.txt`](install/short.txt).) El texto está en inglés, pero el asistente te responderá en tu idioma.
 
