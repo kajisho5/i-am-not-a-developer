@@ -9,5 +9,11 @@
   "homepage": "https://github.com/kajisho5/i-am-not-a-developer",
   "repository": "https://github.com/kajisho5/i-am-not-a-developer",
   "license": "MIT",
-  "keywords": ["beginner", "non-developer", "vibe-coding", "plain-language", "skill"]
+  "keywords": [
+    "beginner",
+    "non-developer",
+    "vibe-coding",
+    "plain-language",
+    "skill"
+  ]
 }
