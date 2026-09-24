@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/kajisho5/i-am-not-a-developer/compare/v0.1.1...v0.1.2) (2026-09-24)
+
+
+### Features
+
+* easier install, plus ChatGPT / Gemini / Grok support ([#7](https://github.com/kajisho5/i-am-not-a-developer/issues/7)) ([65bffde](https://github.com/kajisho5/i-am-not-a-developer/commit/65bffde5b084d0d7f596509d2774f29775c6cab1))
+
 ## [0.1.1](https://github.com/kajisho5/i-am-not-a-developer/compare/v0.1.0...v0.1.1) (2026-09-24)
 
 
