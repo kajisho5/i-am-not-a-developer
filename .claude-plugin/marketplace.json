@@ -1,0 +1,17 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "i-am-not-a-developer",
+  "description": "Your coding agent, for people who have never opened a terminal.",
+  "owner": {
+    "name": "kajisho5",
+    "url": "https://github.com/kajisho5"
+  },
+  "plugins": [
+    {
+      "name": "i-am-not-a-developer",
+      "description": "Plain words, one step at a time, a stop before anything risky, and a diary of every change.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

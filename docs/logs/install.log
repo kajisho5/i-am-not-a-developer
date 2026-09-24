@@ -1,0 +1,18 @@
+$ claude plugin validate --strict .
+Validating marketplace manifest: /home/user/i-am-not-a-developer/.claude-plugin/marketplace.json
+
+√ Validation passed
+$ claude plugin marketplace add ./
+√ Successfully added marketplace: i-am-not-a-developer (declared in user settings)
+$ claude plugin install i-am-not-a-developer@i-am-not-a-developer
+√ Successfully installed plugin: i-am-not-a-developer@i-am-not-a-developer (scope: user)
+$ claude plugin list
+Installed plugins:
+
+  > i-am-not-a-developer@i-am-not-a-developer
+    Version: 0.1.0
+    Scope: user
+    Status: √ enabled
+
+$ claude --version
+2.1.281 (Claude Code)
