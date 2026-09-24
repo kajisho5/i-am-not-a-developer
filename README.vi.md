@@ -12,7 +12,7 @@
 
 **Trợ lý lập trình dành cho người chưa từng mở terminal.**
 
-Đây là một skill (kỹ năng bổ sung) giúp Claude Code (hoặc Codex, hoặc Cursor) đối xử với bạn như một người thông minh nhưng chưa từng dùng terminal. Không thuật ngữ khó hiểu. Nó chỉ cho bạn bấm vào đâu. Mỗi lần một bước. Nó sẽ dừng lại và hỏi bạn trước khi cài đặt, xóa, tính phí hay công khai bất cứ thứ gì. Nó còn ghi nhật ký mọi thay đổi, kèm cách hoàn tác từng thay đổi.
+Đây là một skill (kỹ năng bổ sung) giúp Claude Code (hoặc ChatGPT, Gemini, Grok, Codex, Cursor) đối xử với bạn như một người thông minh nhưng chưa từng dùng terminal. Không thuật ngữ khó hiểu. Nó chỉ cho bạn bấm vào đâu. Mỗi lần một bước. Nó sẽ dừng lại và hỏi bạn trước khi cài đặt, xóa, tính phí hay công khai bất cứ thứ gì. Nó còn ghi nhật ký mọi thay đổi, kèm cách hoàn tác từng thay đổi.
 
 Chỉ một tệp: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md). Chưa đến 600 từ. Không script, không máy chủ.
 
@@ -106,10 +106,43 @@ Bản ghi đầy đủ từ các phiên thật: [ERR_CONNECTION_REFUSED](docs/ex
 
 ## Dùng được với
 
+### ChatGPT, Gemini, Grok (ứng dụng trò chuyện)
+
+**1. Sao chép đoạn văn bản này.** Trên GitHub, nút sao chép nằm ở góc trên bên phải của khung. (1,309 ký tự, vừa với mọi ứng dụng bên dưới. Cùng nội dung: [`install/short.txt`](install/short.txt).) Văn bản bằng tiếng Anh, nhưng trợ lý sẽ trả lời bằng ngôn ngữ của bạn.
+
+```text
+I am not a developer. I'm smart, but I have never used a terminal. Follow these rules in every reply, in my language, until I say "developer mode".
+1. Say where, not what: app → menu → button. Never "open your shell" or "edit the config".
+2. One step at a time. Do what you can yourself. Give me one step (plus how to get there), ask what I see, and stop.
+3. Before a command, say what it does. After it, say what success looks like and what to paste back if it looks different.
+4. Explain each technical word in five words or fewer, or avoid it.
+5. Before anything that installs, deletes, costs money, sends, publishes or touches passwords: say what changes, the cost, the risk and how to undo it, then wait for my yes. No sudo or curl | bash without a reason.
+6. Errors: "The computer said X. That means Y. Next: Z." If you haven't seen the error, ask me to paste it and nothing else. Never blame me.
+7. Keep a diary (WHAT-WE-DID.md, or a list in this chat): date, what changed, how to undo it. Read it before any undo and ask first.
+8. Pick the stable, official, free option that can be undone. Don't offer alternatives.
+9. Put anything I type alone in a code box. For clicks, give the exact button label and where it is.
+10. End every reply with exactly one next action. Never ask more than one question.
+```
+
+**2. Dán vào đây:**
+
+| Ứng dụng | Dán vào đâu | Giới hạn |
+| --- | --- | --- |
+| ChatGPT | **Settings** → **Personalization** → **Custom instructions**, vào ô về cách nó nên trả lời | 1,500 ký tự (miễn phí), 5,000 (trả phí) |
+| Gemini | **Explore Gems** → **New Gem** → **Instructions** → **Save**. Sau đó trò chuyện với Gem đó | Văn bản dài cũng không sao |
+| Grok | **Settings** → **Customize** → ô "how should Grok respond" | 4,000 ký tự |
+
+Tên menu tính đến tháng 9 năm 2026; các ứng dụng hay đổi tên. Trong ứng dụng, tên menu có thể hiện bằng tiếng Việt. Từ đó trở đi, mọi cuộc trò chuyện mới đều theo các quy tắc này (trong Gemini là mọi cuộc trò chuyện với Gem đó).
+
+Các ứng dụng này không thể đụng vào máy tính của bạn. Vì vậy trợ lý sẽ chỉ bạn từng bước một, thay vì tự làm.
+
+### Trợ lý lập trình
+
 | Trợ lý | Cách dùng |
 | --- | --- |
 | Claude Code | Plugin (ở trên), hoặc [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex và các trợ lý khác có đọc `AGENTS.md` | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → `AGENTS.md` trong thư mục dự án của bạn |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → `GEMINI.md` trong thư mục dự án của bạn |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | Bất cứ công cụ nào đọc `SKILL.md` | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 

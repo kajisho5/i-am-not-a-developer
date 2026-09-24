@@ -8,7 +8,7 @@
 - plugin.json and marketplace.json agree on the plugin name
 - every README's language bar links to the other six READMEs
 - install/short*.txt fit in 1,500 characters and have 10 numbered rules
-- README.md / README.ja.md show short.txt / short.ja.txt verbatim
+- every README shows the short text verbatim (README.ja.md: short.ja.txt; others: short.txt)
 """
 import json
 import re
@@ -126,7 +126,7 @@ def main():
         if numbered != [str(i) for i in range(1, 11)]:
             fail(f"{rel}: expected rules numbered 1 to 10")
 
-    for rel in ["README.md", "README.ja.md"]:
+    for rel in READMES:
         path = ROOT / rel
         src = SHORTS[1] if rel == "README.ja.md" else SHORTS[0]
         if path.is_file() and src.is_file():
