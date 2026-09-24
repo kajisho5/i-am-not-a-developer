@@ -18,6 +18,8 @@ Chỉ một tệp: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-de
 
 ## Cài đặt
 
+**Dùng Gemini?** Chỉ cần mở liên kết này: [Gem i-am-not-a-developer](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). Không cần sao chép, không cần đăng nhập.
+
 **Cách dễ nhất: sao chép câu dưới đây, dán vào Claude Code rồi nhấn Enter.** Claude sẽ cài đặt giúp bạn. Nếu nó xin phép, cứ đồng ý.
 
 ```
@@ -107,6 +109,8 @@ Bản ghi đầy đủ từ các phiên thật: [ERR_CONNECTION_REFUSED](docs/ex
 ## Dùng được với
 
 ### ChatGPT, Gemini, Grok (ứng dụng trò chuyện)
+
+**Dùng Gemini?** Chỉ cần mở liên kết này: [Gem i-am-not-a-developer](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). Không cần sao chép, không cần đăng nhập.
 
 **1. Sao chép đoạn văn bản này.** Trên GitHub, nút sao chép nằm ở góc trên bên phải của khung. (1,309 ký tự, vừa với mọi ứng dụng bên dưới. Cùng nội dung: [`install/short.txt`](install/short.txt).) Văn bản bằng tiếng Anh, nhưng trợ lý sẽ trả lời bằng ngôn ngữ của bạn.
 

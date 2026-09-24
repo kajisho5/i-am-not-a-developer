@@ -18,6 +18,8 @@ One file: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/S
 
 ## Install
 
+**Use Gemini?** Just open this link: [i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). No copy-paste, no sign-in needed.
+
 **Easiest: copy this sentence, paste it into Claude Code, and press Enter.** Claude runs the setup for you. If it asks for permission, say yes.
 
 ```
@@ -107,6 +109,8 @@ Full transcripts from real sessions: [ERR_CONNECTION_REFUSED](docs/examples/befo
 ## Works with
 
 ### ChatGPT, Gemini, Grok (chat apps)
+
+**Use Gemini?** Just open this link: [i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). No copy-paste, no sign-in needed.
 
 **1. Copy this text.** On GitHub, the copy button is at the top right of the box. (1,309 characters, fits every app below. Same text: [`install/short.txt`](install/short.txt).)
 

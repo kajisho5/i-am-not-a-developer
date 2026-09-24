@@ -18,6 +18,8 @@ Claude Code（ChatGPT・Gemini・Grok・Codex・Cursor でも）を「頭はい�
 
 ## インストール
 
+**Gemini を使っている人は、このリンクを開くだけです:** [開発者じゃない人のためのAI（Gem）](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing)。コピペもログインも要りません。
+
 **いちばん簡単な方法: 下の文をコピーして Claude Code に貼り付け、Enter を押すだけです。** 設定作業は Claude がやってくれます。途中で許可を求められたら「はい」と答えてください。
 
 ```
@@ -107,6 +109,8 @@ claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ## 対応しているエージェント
 
 ### ChatGPT・Gemini・Grok（チャットアプリ）
+
+**Gemini を使っている人は、このリンクを開くだけです:** [開発者じゃない人のためのAI（Gem）](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing)。コピペもログインも要りません。
 
 **1. 下の文章をコピーします。** GitHub では枠の右上にコピーボタンがあります（739文字。下のどのアプリにも入ります。同じ文章: [`install/short.ja.txt`](install/short.ja.txt)）。
 

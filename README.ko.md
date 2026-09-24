@@ -18,6 +18,8 @@ Claude Code(또는 ChatGPT, Gemini, Grok, Codex, Cursor)가 여러분을 "똑똑
 
 ## 설치
 
+**Gemini를 쓰시나요?** 이 링크만 열면 됩니다: [i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). 복사·붙여넣기도, 로그인도 필요 없습니다.
+
 **가장 쉬운 방법: 아래 문장을 복사해서 Claude Code에 붙여 넣고 Enter를 누르세요.** 설치는 Claude가 대신 해 줍니다. 허락해 달라고 물어보면 "네"라고 답하세요.
 
 ```
@@ -107,6 +109,8 @@ claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ## 지원 도구
 
 ### ChatGPT, Gemini, Grok (채팅 앱)
+
+**Gemini를 쓰시나요?** 이 링크만 열면 됩니다: [i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing). 복사·붙여넣기도, 로그인도 필요 없습니다.
 
 **1. 아래 글을 복사하세요.** GitHub에서는 상자 오른쪽 위에 복사 버튼이 있습니다. (1,309자, 아래 앱 모두에 들어갑니다. 같은 글: [`install/short.txt`](install/short.txt).) 글은 영어지만, 에이전트는 여러분의 언어로 답합니다.
 

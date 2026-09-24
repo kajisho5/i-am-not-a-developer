@@ -18,6 +18,8 @@
 
 ## 安装
 
+**使用 Gemini？** 直接打开这个链接即可：[i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing)。无需复制粘贴，也无需登录。
+
 **最简单的方法：复制下面这句话，粘贴到 Claude Code 里，然后按回车。** Claude 会帮你完成安装。如果它问你要不要允许，回答“是”就行。
 
 ```
@@ -107,6 +109,8 @@ claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ## 支持的工具
 
 ### ChatGPT、Gemini、Grok（聊天应用）
+
+**使用 Gemini？** 直接打开这个链接即可：[i-am-not-a-developer Gem](https://gemini.google.com/gem/1wcFBsbprLnB7L5PQyTjzC2d6tfXdzJFr?usp=sharing)。无需复制粘贴，也无需登录。
 
 **1. 复制下面这段文字。** 在 GitHub 上，复制按钮在方框的右上角。（1,309 个字符，下面每个应用都放得下。同样的文字：[`install/short.txt`](install/short.txt)。）这段文字是英文的，但助手会用你的语言回答。
 
