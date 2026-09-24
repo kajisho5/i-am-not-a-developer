@@ -18,7 +18,26 @@
 
 ## 安装
 
-在 Claude Code 里输入下面三行，一次输一行：
+**最简单的方法：复制下面这句话，粘贴到 Claude Code 里，然后按回车。** Claude 会帮你完成安装。如果它问你要不要允许，回答“是”就行。
+
+```
+帮我安装这个插件：先运行 "claude plugin marketplace add kajisho5/i-am-not-a-developer"，再运行 "claude plugin install i-am-not-a-developer@i-am-not-a-developer"，装好后告诉我。
+```
+
+它说装好了以后，关掉 Claude Code，再重新打开，然后输入 `/i-am-not-a-developer`。在这次会话结束前，它会一直开着。想关掉的话，输入 "developer mode"（意思是“开发者模式”）就行。
+
+**什么都不想安装？** 那就用下面这句话开始你的对话。它只在这一次对话里有效。
+
+```
+在这整个对话里，请遵守这里的规则：https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+这个方法在 Claude Code 里能用。其他聊天应用只有在能打开链接时才能用。如果你用的应用打不开链接，就自己打开这个链接，复制全部文字，再粘贴到聊天里。
+
+<details>
+<summary>习惯用命令？</summary>
+
+在 Claude Code 里：
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@
 /i-am-not-a-developer
 ```
 
-最后一行用来开启它。开启后，在这次会话结束前会一直有效。想关掉的话，输入 "developer mode"（意思是“开发者模式”）就行。
-
-也可以在 Terminal 里安装：
+在 Terminal 里：
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**上面的命令用不了？** 把 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) 的内容粘贴到项目文件夹里一个叫 `CLAUDE.md` 的文件中。效果一样，而且会一直开着。
+或者，把 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) 的内容粘贴到项目文件夹里一个叫 `CLAUDE.md` 的文件中。效果一样，而且会一直开着。
+
+</details>
 
 ## 使用前 / 使用后
 

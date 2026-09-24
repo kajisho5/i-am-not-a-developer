@@ -18,7 +18,26 @@ Un solo archivo: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-deve
 
 ## Instalación
 
-Escribe estas tres líneas en Claude Code, una por una:
+**Lo más fácil: copia esta frase, pégala en Claude Code y pulsa Enter.** Claude hace la instalación por ti. Si te pide permiso, di que sí.
+
+```
+Instala este plugin por mí: ejecuta "claude plugin marketplace add kajisho5/i-am-not-a-developer", luego "claude plugin install i-am-not-a-developer@i-am-not-a-developer", y avísame cuando termines.
+```
+
+Cuando te diga que terminó, cierra Claude Code, vuelve a abrirlo y escribe `/i-am-not-a-developer`. Queda activo durante el resto de la sesión. Para apagarlo, escribe "developer mode" (modo desarrollador).
+
+**¿No quieres instalar nada?** Entonces empieza tu conversación con esta frase. Dura solo esa conversación.
+
+```
+Durante toda esta conversación, sigue las reglas de https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+Esto funciona en Claude Code. Otras apps de chat solo pueden usarlo si pueden abrir enlaces. Si la tuya no puede, abre tú el enlace, copia todo el texto y pégalo en el chat.
+
+<details>
+<summary>¿Te manejas bien con comandos?</summary>
+
+Dentro de Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Escribe estas tres líneas en Claude Code, una por una:
 /i-am-not-a-developer
 ```
 
-La última línea lo activa. Queda activo durante el resto de la sesión. Para apagarlo, escribe "developer mode" (modo desarrollador).
-
-O, si prefieres, desde la Terminal:
+Desde la Terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**¿No puedes ejecutar eso?** Pega [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) en un archivo llamado `CLAUDE.md` dentro de la carpeta de tu proyecto. Funciona igual, y siempre está activo.
+O pega [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) en un archivo llamado `CLAUDE.md` dentro de la carpeta de tu proyecto. Funciona igual, y siempre está activo.
+
+</details>
 
 ## Antes / Después
 

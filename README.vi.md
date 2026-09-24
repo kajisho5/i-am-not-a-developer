@@ -18,7 +18,26 @@ Chỉ một tệp: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-de
 
 ## Cài đặt
 
-Gõ ba dòng này vào Claude Code, mỗi lần một dòng:
+**Cách dễ nhất: sao chép câu dưới đây, dán vào Claude Code rồi nhấn Enter.** Claude sẽ cài đặt giúp bạn. Nếu nó xin phép, cứ đồng ý.
+
+```
+Hãy cài plugin này giúp tôi: chạy "claude plugin marketplace add kajisho5/i-am-not-a-developer", sau đó chạy "claude plugin install i-am-not-a-developer@i-am-not-a-developer", rồi báo tôi khi xong.
+```
+
+Khi nó báo đã xong, hãy đóng Claude Code, mở lại, rồi gõ `/i-am-not-a-developer`. Nó sẽ bật suốt phần còn lại của phiên làm việc. Muốn tắt, hãy nói "developer mode" (chế độ lập trình viên).
+
+**Không muốn cài gì cả?** Vậy hãy bắt đầu cuộc trò chuyện bằng câu này. Nó chỉ có hiệu lực trong cuộc trò chuyện đó.
+
+```
+Trong suốt cuộc trò chuyện này, hãy làm theo các quy tắc tại https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+Cách này dùng được trong Claude Code. Các ứng dụng chat khác chỉ dùng được nếu chúng mở được đường link. Nếu ứng dụng của bạn không mở được, hãy tự mở link, sao chép toàn bộ nội dung rồi dán vào khung chat.
+
+<details>
+<summary>Bạn quen dùng lệnh?</summary>
+
+Trong Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Gõ ba dòng này vào Claude Code, mỗi lần một dòng:
 /i-am-not-a-developer
 ```
 
-Dòng cuối cùng dùng để bật nó. Nó sẽ bật suốt phần còn lại của phiên làm việc. Muốn tắt, hãy nói "developer mode" (chế độ lập trình viên).
-
-Hoặc cài từ Terminal:
+Từ Terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**Không chạy được mấy lệnh đó?** Hãy dán [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) vào một tệp tên là `CLAUDE.md` trong thư mục dự án của bạn. Cách này hoạt động y như vậy, và luôn được bật.
+Hoặc dán [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) vào một tệp tên là `CLAUDE.md` trong thư mục dự án của bạn. Cách này hoạt động y như vậy, và luôn được bật.
+
+</details>
 
 ## Trước / Sau
 

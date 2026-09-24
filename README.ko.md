@@ -18,7 +18,26 @@ Claude Code(또는 Codex, Cursor)가 여러분을 "똑똑하지만 터미널은 
 
 ## 설치
 
-Claude Code에 아래 세 줄을 한 줄씩 입력하세요:
+**가장 쉬운 방법: 아래 문장을 복사해서 Claude Code에 붙여 넣고 Enter를 누르세요.** 설치는 Claude가 대신 해 줍니다. 허락해 달라고 물어보면 "네"라고 답하세요.
+
+```
+이 플러그인을 설치해 줘: "claude plugin marketplace add kajisho5/i-am-not-a-developer"를 실행하고, 그다음 "claude plugin install i-am-not-a-developer@i-am-not-a-developer"를 실행한 뒤, 다 끝나면 알려 줘.
+```
+
+다 끝났다고 하면 Claude Code를 닫았다가 다시 열고, `/i-am-not-a-developer`를 입력하세요. 켜진 상태는 세션이 끝날 때까지 유지됩니다. 끄고 싶으면 "developer mode"(개발자 모드)라고 말하면 됩니다.
+
+**아무것도 설치하고 싶지 않나요?** 그럼 대화를 이 문장으로 시작하세요. 그 대화에서만 적용됩니다.
+
+```
+이 대화 내내 다음 링크에 있는 규칙을 따라 줘: https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+이 방법은 Claude Code에서 작동합니다. 다른 채팅 앱은 링크를 열 수 있을 때만 쓸 수 있습니다. 쓰는 앱이 링크를 못 연다면, 직접 링크를 열어 글 전체를 복사한 뒤 채팅에 붙여 넣으세요.
+
+<details>
+<summary>명령어가 익숙하신가요?</summary>
+
+Claude Code 안에서:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Claude Code에 아래 세 줄을 한 줄씩 입력하세요:
 /i-am-not-a-developer
 ```
 
-마지막 줄을 입력하면 켜집니다. 켜진 상태는 세션이 끝날 때까지 유지됩니다. 끄고 싶으면 "developer mode"(개발자 모드)라고 말하면 됩니다.
-
-Terminal에서 설치할 수도 있습니다:
+Terminal에서:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**위 명령이 실행되지 않나요?** [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet)의 내용을 프로젝트 폴더 안의 `CLAUDE.md`라는 파일에 붙여 넣으세요. 똑같이 작동하고, 항상 켜져 있습니다.
+또는 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet)의 내용을 프로젝트 폴더 안의 `CLAUDE.md`라는 파일에 붙여 넣으세요. 똑같이 작동하고, 항상 켜져 있습니다.
+
+</details>
 
 ## 사용 전 / 사용 후
 

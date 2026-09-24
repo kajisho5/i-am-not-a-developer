@@ -18,7 +18,26 @@ Um arquivo só: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-devel
 
 ## Instalação
 
-Digite estas três linhas no Claude Code, uma de cada vez:
+**Jeito mais fácil: copie esta frase, cole no Claude Code e aperte Enter.** O Claude faz a instalação para você. Se ele pedir permissão, diga que sim.
+
+```
+Instale este plugin para mim: rode "claude plugin marketplace add kajisho5/i-am-not-a-developer", depois "claude plugin install i-am-not-a-developer@i-am-not-a-developer", e me avise quando terminar.
+```
+
+Quando ele disser que terminou, feche o Claude Code, abra de novo e digite `/i-am-not-a-developer`. Ele fica ligado até o fim da sessão. Para desligar, diga "developer mode" (modo desenvolvedor).
+
+**Não quer instalar nada?** Então comece a conversa com esta frase. Ela vale só para aquela conversa.
+
+```
+Durante toda esta conversa, siga as regras de https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+Isso funciona no Claude Code. Outros apps de chat só conseguem usar se puderem abrir links. Se o seu não puder, abra o link você mesmo, copie todo o texto e cole no chat.
+
+<details>
+<summary>Tem familiaridade com comandos?</summary>
+
+Dentro do Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Digite estas três linhas no Claude Code, uma de cada vez:
 /i-am-not-a-developer
 ```
 
-A última linha liga a skill. Ela fica ligada até o fim da sessão. Para desligar, diga "developer mode" (modo desenvolvedor).
-
-Ou, se preferir, pelo Terminal:
+Pelo Terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**Não conseguiu rodar esses comandos?** Cole [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) em um arquivo chamado `CLAUDE.md` na pasta do seu projeto. Funciona do mesmo jeito, e fica sempre ligado.
+Ou cole [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) em um arquivo chamado `CLAUDE.md` na pasta do seu projeto. Funciona do mesmo jeito, e fica sempre ligado.
+
+</details>
 
 ## Antes / Depois
 
