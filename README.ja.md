@@ -18,7 +18,26 @@ Claude Code（Codex、Cursor でも）を「頭はいいけど、ターミナル
 
 ## インストール
 
-Claude Code に、次の 3 行を 1 行ずつ入力します：
+**いちばん簡単な方法: 下の文をコピーして Claude Code に貼り付け、Enter を押すだけです。** 設定作業は Claude がやってくれます。途中で許可を求められたら「はい」と答えてください。
+
+```
+このプラグインを入れてください。"claude plugin marketplace add kajisho5/i-am-not-a-developer" を実行してから "claude plugin install i-am-not-a-developer@i-am-not-a-developer" を実行して、終わったら教えてください。
+```
+
+「終わりました」と返ってきたら、Claude Code をいったん閉じて開き直し、`/i-am-not-a-developer` と入力します。そのセッションの間はずっとオンです。やめたいときは "developer mode" と入力してください。
+
+**何もインストールしたくない場合は**、会話の最初に下の文を送ってください。その会話の間だけ有効です。
+
+```
+この会話の間は https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md のルールに従ってください。
+```
+
+Claude Code では動作を確認済みです。ほかのチャットアプリで使えるのは、そのアプリがリンク先を読める場合だけです。読めない場合は、リンクを自分で開いて中の文章をすべてコピーし、チャットに貼り付けてください。
+
+<details>
+<summary>コマンドに慣れている方へ</summary>
+
+Claude Code の中で:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Claude Code に、次の 3 行を 1 行ずつ入力します：
 /i-am-not-a-developer
 ```
 
-最後の行でオンになり、そのセッションの間はずっと有効です。やめたいときは "developer mode" と入力してください。
-
-ターミナルから入れる場合：
+ターミナルから:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**うまく実行できない場合は**、[`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) の中身を、プロジェクトのフォルダにある `CLAUDE.md` というファイルに貼り付けるだけでも同じように動きます（こちらは常にオン）。
+または、[`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) の中身を、プロジェクトのフォルダにある `CLAUDE.md` というファイルに貼り付けても同じように動きます（こちらは常にオン）。
+
+</details>
 
 ## Before / After
 

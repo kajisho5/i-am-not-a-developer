@@ -18,7 +18,26 @@ One file: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/S
 
 ## Install
 
-Type these three lines into Claude Code, one at a time:
+**Easiest: copy this sentence, paste it into Claude Code, and press Enter.** Claude runs the setup for you. If it asks for permission, say yes.
+
+```
+Install this plugin for me: run "claude plugin marketplace add kajisho5/i-am-not-a-developer", then "claude plugin install i-am-not-a-developer@i-am-not-a-developer", and tell me when it's done.
+```
+
+When it says it's done, close Claude Code, open it again, and type `/i-am-not-a-developer`. It stays on for the rest of the session. Say "developer mode" to turn it off.
+
+**Don't want to install anything?** Start your conversation with this sentence instead. It lasts for that one conversation.
+
+```
+For this whole conversation, follow the rules at https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+This works in Claude Code. Other chat apps can use it only if they can open links; if yours can't, open the link yourself, copy all the text, and paste it into the chat.
+
+<details>
+<summary>Comfortable with commands?</summary>
+
+Inside Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Type these three lines into Claude Code, one at a time:
 /i-am-not-a-developer
 ```
 
-The last line turns it on. It stays on for the rest of the session. Say "developer mode" to turn it off.
-
-From a terminal instead:
+From a terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**Can't run those?** Paste [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) into a file called `CLAUDE.md` in your project folder. It works the same, and it's always on.
+Or paste [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) into a file called `CLAUDE.md` in your project folder. It works the same, and it's always on.
+
+</details>
 
 ## Before / After
 
