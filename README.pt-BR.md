@@ -12,13 +12,32 @@
 
 **Seu assistente de programação, para quem nunca abriu um terminal.**
 
-É uma skill (uma habilidade extra) que faz o Claude Code (ou o Codex, ou o Cursor) tratar você como uma pessoa inteligente que nunca usou um terminal. Sem jargão. Ele diz onde clicar. Um passo de cada vez. Ele para e pergunta antes de instalar, apagar, cobrar ou publicar qualquer coisa. E mantém um diário de tudo o que mudou, com um jeito de desfazer cada mudança.
+É uma skill (uma habilidade extra) que faz o Claude Code (ou o ChatGPT, Gemini, Grok, Codex ou Cursor) tratar você como uma pessoa inteligente que nunca usou um terminal. Sem jargão. Ele diz onde clicar. Um passo de cada vez. Ele para e pergunta antes de instalar, apagar, cobrar ou publicar qualquer coisa. E mantém um diário de tudo o que mudou, com um jeito de desfazer cada mudança.
 
 Um arquivo só: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md). Menos de 600 palavras. Sem scripts, sem servidores.
 
 ## Instalação
 
-Digite estas três linhas no Claude Code, uma de cada vez:
+**Jeito mais fácil: copie esta frase, cole no Claude Code e aperte Enter.** O Claude faz a instalação para você. Se ele pedir permissão, diga que sim.
+
+```
+Instale este plugin para mim: rode "claude plugin marketplace add kajisho5/i-am-not-a-developer", depois "claude plugin install i-am-not-a-developer@i-am-not-a-developer", e me avise quando terminar.
+```
+
+Quando ele disser que terminou, feche o Claude Code, abra de novo e digite `/i-am-not-a-developer`. Ele fica ligado até o fim da sessão. Para desligar, diga "developer mode" (modo desenvolvedor).
+
+**Não quer instalar nada?** Então comece a conversa com esta frase. Ela vale só para aquela conversa.
+
+```
+Durante toda esta conversa, siga as regras de https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+Isso funciona no Claude Code. Outros apps de chat só conseguem usar se puderem abrir links. Se o seu não puder, abra o link você mesmo, copie todo o texto e cole no chat.
+
+<details>
+<summary>Tem familiaridade com comandos?</summary>
+
+Dentro do Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Digite estas três linhas no Claude Code, uma de cada vez:
 /i-am-not-a-developer
 ```
 
-A última linha liga a skill. Ela fica ligada até o fim da sessão. Para desligar, diga "developer mode" (modo desenvolvedor).
-
-Ou, se preferir, pelo Terminal:
+Pelo Terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**Não conseguiu rodar esses comandos?** Cole [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) em um arquivo chamado `CLAUDE.md` na pasta do seu projeto. Funciona do mesmo jeito, e fica sempre ligado.
+Ou cole [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) em um arquivo chamado `CLAUDE.md` na pasta do seu projeto. Funciona do mesmo jeito, e fica sempre ligado.
+
+</details>
 
 ## Antes / Depois
 
@@ -87,10 +106,43 @@ Conversas completas de sessões reais: [ERR_CONNECTION_REFUSED](docs/examples/be
 
 ## Funciona com
 
+### ChatGPT, Gemini, Grok (apps de chat)
+
+**1. Copie este texto.** No GitHub, o botão de copiar fica no canto superior direito da caixa. (1,309 caracteres, cabe em todos os apps abaixo. O mesmo texto: [`install/short.txt`](install/short.txt).) O texto está em inglês, mas o assistente vai responder no seu idioma.
+
+```text
+I am not a developer. I'm smart, but I have never used a terminal. Follow these rules in every reply, in my language, until I say "developer mode".
+1. Say where, not what: app → menu → button. Never "open your shell" or "edit the config".
+2. One step at a time. Do what you can yourself. Give me one step (plus how to get there), ask what I see, and stop.
+3. Before a command, say what it does. After it, say what success looks like and what to paste back if it looks different.
+4. Explain each technical word in five words or fewer, or avoid it.
+5. Before anything that installs, deletes, costs money, sends, publishes or touches passwords: say what changes, the cost, the risk and how to undo it, then wait for my yes. No sudo or curl | bash without a reason.
+6. Errors: "The computer said X. That means Y. Next: Z." If you haven't seen the error, ask me to paste it and nothing else. Never blame me.
+7. Keep a diary (WHAT-WE-DID.md, or a list in this chat): date, what changed, how to undo it. Read it before any undo and ask first.
+8. Pick the stable, official, free option that can be undone. Don't offer alternatives.
+9. Put anything I type alone in a code box. For clicks, give the exact button label and where it is.
+10. End every reply with exactly one next action. Never ask more than one question.
+```
+
+**2. Cole aqui:**
+
+| App | Onde colar | Limite |
+| --- | --- | --- |
+| ChatGPT | **Settings** → **Personalization** → **Custom instructions**, na caixa sobre como ele deve responder | 1,500 caracteres (grátis), 5,000 (pago) |
+| Gemini | **Explore Gems** → **New Gem** → **Instructions** → **Save**. Depois, converse com esse Gem | Texto longo não tem problema |
+| Grok | **Settings** → **Customize** → a caixa "how should Grok respond" | 4,000 caracteres |
+
+Nomes de menu de setembro de 2026; os apps mudam esses nomes com frequência. No app, esses nomes podem aparecer em português. A partir daí, toda conversa nova segue as regras (no Gemini, toda conversa com esse Gem).
+
+Esses apps não conseguem mexer no seu computador. Por isso o assistente passa um passo de cada vez, em vez de fazer por você.
+
+### Assistentes de programação
+
 | Assistente | Como |
 | --- | --- |
 | Claude Code | Plugin (acima), ou [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex e outros assistentes que leem `AGENTS.md` | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → `AGENTS.md` na pasta do seu projeto |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → `GEMINI.md` na pasta do seu projeto |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | Qualquer coisa que leia `SKILL.md` | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 

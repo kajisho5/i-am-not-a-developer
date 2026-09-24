@@ -12,13 +12,32 @@
 
 **给从没打开过终端的人用的编程助手。**
 
-这是一个技能（skill）。装上以后，Claude Code（或 Codex、Cursor）会把你当成一个聪明、但从没用过终端的人。不说行话。告诉你该点哪里。一次只走一步。在安装、删除、花钱或发布任何东西之前，它都会先停下来问你。它还会把改过的每一处都记进日记，并告诉你每一处怎么撤销。
+这是一个技能（skill）。装上以后，Claude Code（或 ChatGPT、Gemini、Grok、Codex、Cursor）会把你当成一个聪明、但从没用过终端的人。不说行话。告诉你该点哪里。一次只走一步。在安装、删除、花钱或发布任何东西之前，它都会先停下来问你。它还会把改过的每一处都记进日记，并告诉你每一处怎么撤销。
 
 只有一个文件：[`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md)。不到 600 个英文单词。没有脚本，也没有服务器。
 
 ## 安装
 
-在 Claude Code 里输入下面三行，一次输一行：
+**最简单的方法：复制下面这句话，粘贴到 Claude Code 里，然后按回车。** Claude 会帮你完成安装。如果它问你要不要允许，回答“是”就行。
+
+```
+帮我安装这个插件：先运行 "claude plugin marketplace add kajisho5/i-am-not-a-developer"，再运行 "claude plugin install i-am-not-a-developer@i-am-not-a-developer"，装好后告诉我。
+```
+
+它说装好了以后，关掉 Claude Code，再重新打开，然后输入 `/i-am-not-a-developer`。在这次会话结束前，它会一直开着。想关掉的话，输入 "developer mode"（意思是“开发者模式”）就行。
+
+**什么都不想安装？** 那就用下面这句话开始你的对话。它只在这一次对话里有效。
+
+```
+在这整个对话里，请遵守这里的规则：https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+这个方法在 Claude Code 里能用。其他聊天应用只有在能打开链接时才能用。如果你用的应用打不开链接，就自己打开这个链接，复制全部文字，再粘贴到聊天里。
+
+<details>
+<summary>习惯用命令？</summary>
+
+在 Claude Code 里：
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@
 /i-am-not-a-developer
 ```
 
-最后一行用来开启它。开启后，在这次会话结束前会一直有效。想关掉的话，输入 "developer mode"（意思是“开发者模式”）就行。
-
-也可以在 Terminal 里安装：
+在 Terminal 里：
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**上面的命令用不了？** 把 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) 的内容粘贴到项目文件夹里一个叫 `CLAUDE.md` 的文件中。效果一样，而且会一直开着。
+或者，把 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) 的内容粘贴到项目文件夹里一个叫 `CLAUDE.md` 的文件中。效果一样，而且会一直开着。
+
+</details>
 
 ## 使用前 / 使用后
 
@@ -87,10 +106,43 @@ claude plugin install i-am-not-a-developer@i-am-not-a-developer
 
 ## 支持的工具
 
+### ChatGPT、Gemini、Grok（聊天应用）
+
+**1. 复制下面这段文字。** 在 GitHub 上，复制按钮在方框的右上角。（1,309 个字符，下面每个应用都放得下。同样的文字：[`install/short.txt`](install/short.txt)。）这段文字是英文的，但助手会用你的语言回答。
+
+```text
+I am not a developer. I'm smart, but I have never used a terminal. Follow these rules in every reply, in my language, until I say "developer mode".
+1. Say where, not what: app → menu → button. Never "open your shell" or "edit the config".
+2. One step at a time. Do what you can yourself. Give me one step (plus how to get there), ask what I see, and stop.
+3. Before a command, say what it does. After it, say what success looks like and what to paste back if it looks different.
+4. Explain each technical word in five words or fewer, or avoid it.
+5. Before anything that installs, deletes, costs money, sends, publishes or touches passwords: say what changes, the cost, the risk and how to undo it, then wait for my yes. No sudo or curl | bash without a reason.
+6. Errors: "The computer said X. That means Y. Next: Z." If you haven't seen the error, ask me to paste it and nothing else. Never blame me.
+7. Keep a diary (WHAT-WE-DID.md, or a list in this chat): date, what changed, how to undo it. Read it before any undo and ask first.
+8. Pick the stable, official, free option that can be undone. Don't offer alternatives.
+9. Put anything I type alone in a code box. For clicks, give the exact button label and where it is.
+10. End every reply with exactly one next action. Never ask more than one question.
+```
+
+**2. 粘贴到这里：**
+
+| 应用 | 粘贴到哪里 | 字数上限 |
+| --- | --- | --- |
+| ChatGPT | **Settings** → **Personalization** → **Custom instructions**，填在“希望它怎么回答”的那一栏 | 1,500 个字符（免费版），5,000（付费版） |
+| Gemini | **Explore Gems** → **New Gem** → **Instructions** → **Save**。之后就和这个 Gem 聊天 | 长一点也没关系 |
+| Grok | **Settings** → **Customize** → “how should Grok respond” 那一栏 | 4,000 个字符 |
+
+菜单名是 2026 年 9 月时的名字；应用经常改名。在应用里，这些菜单名可能显示为中文。贴好以后，每个新对话都会遵守这些规则（在 Gemini 里，是和这个 Gem 的每个对话）。
+
+这些应用碰不到你的电脑，所以助手不会替你动手，而是一次告诉你一步。
+
+### 编程助手
+
 | 助手 | 用法 |
 | --- | --- |
 | Claude Code | 插件（见上文），或 [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex 以及其他会读取 `AGENTS.md` 的助手 | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → 项目文件夹里的 `AGENTS.md` |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → 项目文件夹里的 `GEMINI.md` |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | 任何会读取 `SKILL.md` 的工具 | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 

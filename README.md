@@ -12,13 +12,32 @@
 
 **Your coding agent, for people who have never opened a terminal.**
 
-A skill that makes Claude Code (or Codex, or Cursor) treat you like a smart person who has never used a terminal. No jargon. It tells you where to click. One step at a time. It stops and asks before it installs, deletes, charges or publishes anything. And it keeps a diary of everything it changed, with a way to undo each change.
+A skill that makes Claude Code (or ChatGPT, Gemini, Grok, Codex, Cursor) treat you like a smart person who has never used a terminal. No jargon. It tells you where to click. One step at a time. It stops and asks before it installs, deletes, charges or publishes anything. And it keeps a diary of everything it changed, with a way to undo each change.
 
 One file: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md). Under 600 words. No scripts, no servers.
 
 ## Install
 
-Type these three lines into Claude Code, one at a time:
+**Easiest: copy this sentence, paste it into Claude Code, and press Enter.** Claude runs the setup for you. If it asks for permission, say yes.
+
+```
+Install this plugin for me: run "claude plugin marketplace add kajisho5/i-am-not-a-developer", then "claude plugin install i-am-not-a-developer@i-am-not-a-developer", and tell me when it's done.
+```
+
+When it says it's done, close Claude Code, open it again, and type `/i-am-not-a-developer`. It stays on for the rest of the session. Say "developer mode" to turn it off.
+
+**Don't want to install anything?** Start your conversation with this sentence instead. It lasts for that one conversation.
+
+```
+For this whole conversation, follow the rules at https://raw.githubusercontent.com/kajisho5/i-am-not-a-developer/main/skills/i-am-not-a-developer/SKILL.md
+```
+
+This works in Claude Code. Other chat apps can use it only if they can open links; if yours can't, open the link yourself, copy all the text, and paste it into the chat.
+
+<details>
+<summary>Comfortable with commands?</summary>
+
+Inside Claude Code:
 
 ```
 /plugin marketplace add kajisho5/i-am-not-a-developer
@@ -26,16 +45,16 @@ Type these three lines into Claude Code, one at a time:
 /i-am-not-a-developer
 ```
 
-The last line turns it on. It stays on for the rest of the session. Say "developer mode" to turn it off.
-
-From a terminal instead:
+From a terminal:
 
 ```
 claude plugin marketplace add kajisho5/i-am-not-a-developer
 claude plugin install i-am-not-a-developer@i-am-not-a-developer
 ```
 
-**Can't run those?** Paste [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) into a file called `CLAUDE.md` in your project folder. It works the same, and it's always on.
+Or paste [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) into a file called `CLAUDE.md` in your project folder. It works the same, and it's always on.
+
+</details>
 
 ## Before / After
 
@@ -87,10 +106,43 @@ Full transcripts from real sessions: [ERR_CONNECTION_REFUSED](docs/examples/befo
 
 ## Works with
 
+### ChatGPT, Gemini, Grok (chat apps)
+
+**1. Copy this text.** On GitHub, the copy button is at the top right of the box. (1,309 characters, fits every app below. Same text: [`install/short.txt`](install/short.txt).)
+
+```text
+I am not a developer. I'm smart, but I have never used a terminal. Follow these rules in every reply, in my language, until I say "developer mode".
+1. Say where, not what: app → menu → button. Never "open your shell" or "edit the config".
+2. One step at a time. Do what you can yourself. Give me one step (plus how to get there), ask what I see, and stop.
+3. Before a command, say what it does. After it, say what success looks like and what to paste back if it looks different.
+4. Explain each technical word in five words or fewer, or avoid it.
+5. Before anything that installs, deletes, costs money, sends, publishes or touches passwords: say what changes, the cost, the risk and how to undo it, then wait for my yes. No sudo or curl | bash without a reason.
+6. Errors: "The computer said X. That means Y. Next: Z." If you haven't seen the error, ask me to paste it and nothing else. Never blame me.
+7. Keep a diary (WHAT-WE-DID.md, or a list in this chat): date, what changed, how to undo it. Read it before any undo and ask first.
+8. Pick the stable, official, free option that can be undone. Don't offer alternatives.
+9. Put anything I type alone in a code box. For clicks, give the exact button label and where it is.
+10. End every reply with exactly one next action. Never ask more than one question.
+```
+
+**2. Paste it here:**
+
+| App | Where to paste | Limit |
+| --- | --- | --- |
+| ChatGPT | **Settings** → **Personalization** → **Custom instructions**, in the box about how it should respond | 1,500 characters (free), 5,000 (paid) |
+| Gemini | **Explore Gems** → **New Gem** → **Instructions** → **Save**. Then chat with that Gem | Long text is fine |
+| Grok | **Settings** → **Customize** → the "how should Grok respond" box | 4,000 characters |
+
+Menu names as of September 2026; apps rename them often. From then on, every new chat follows the rules (in Gemini, every chat with that Gem).
+
+These apps can't touch your computer, so the agent gives you one step at a time instead of doing it itself.
+
+### Coding agents
+
 | Agent | How |
 | --- | --- |
 | Claude Code | Plugin (above), or [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex and other agents that read `AGENTS.md` | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → `AGENTS.md` in your project folder |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → `GEMINI.md` in your project folder |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | Anything that reads `SKILL.md` | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 
