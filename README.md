@@ -72,7 +72,7 @@ After "yes", it installs, starts the site, writes `WHAT-WE-DID.md`, and ends wit
 
 Full transcripts from real sessions: [ERR_CONNECTION_REFUSED](docs/examples/before-after-1.md) · [Install Python](docs/examples/before-after-2.md) · [Undo yesterday](docs/examples/before-after-3.md) · [Permission denied](docs/examples/before-after-4.md)
 
-## The rules
+## The 10 rules
 
 1. **Say where, not what.** "Press ⌘ and Space, type Terminal" — never "open your shell".
 2. **One step, then wait.** It does what it can itself. What only you can do comes one step at a time.

@@ -22,3 +22,4 @@ One line per decision. Newest at the bottom.
 - 2026-09-24 P2 (round 7→8): Rule 7 — one run installed and started a server but skipped the diary. Now "add a dated entry before replying". 2/2 wrote the diary afterwards.
 - 2026-09-24 P2: Stopped at round 8 (10 runs, 2 per scenario). Remaining misses are minor and inconsistent: "Open index.html in your browser" without saying where to click, and an occasional second clause in a question.
 - 2026-09-24 P2: Before/After examples use real transcripts from `claude -p` with the plugin disabled (Before) and enabled (After). Chat-only scenarios (03, 05) run with the command tool disabled.
+- 2026-09-24 P5: release-please with `release-type: simple`, `initial-version: 0.1.0` and an empty manifest (`{}`), so the first release PR is v0.1.0. `extra-files` bumps `.claude-plugin/plugin.json` `$.version` (JSON updater, per release-please docs/customizing.md).

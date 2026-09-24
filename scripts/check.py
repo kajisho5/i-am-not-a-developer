@@ -6,6 +6,7 @@
 - SKILL.md frontmatter has name/description and the body is <= 600 words
 - the SKILL.md body appears verbatim in every install/ snippet
 - plugin.json and marketplace.json agree on the plugin name
+- every README's language bar links to the other six READMEs
 """
 import json
 import re
@@ -105,6 +106,18 @@ def main():
             path = ROOT / rel
             if path.is_file() and body not in path.read_text(encoding="utf-8"):
                 fail(f"{rel}: out of sync with the SKILL.md body (copy it verbatim)")
+
+    for rel in READMES:
+        path = ROOT / rel
+        if not path.is_file():
+            continue
+        bar = path.read_text(encoding="utf-8").split("</p>", 1)[0]
+        for other in READMES:
+            linked = f'href="{other}"' in bar
+            if other == rel and linked:
+                fail(f"{rel}: language bar links to itself")
+            if other != rel and not linked:
+                fail(f"{rel}: language bar is missing a link to {other}")
 
     if errors:
         for e in errors:
