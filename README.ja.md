@@ -12,7 +12,7 @@
 
 **ターミナルを開いたことがない人のための、コーディングエージェント。**
 
-Claude Code（Codex、Cursor でも）を「頭はいいけど、ターミナルは触ったことがない人」向けの話し方に切り替えるスキルです。専門用語を使わない。どこを押せばいいかを言う。1 手ずつ進める。インストール・削除・課金・公開の前には必ず止まって聞く。そして、変えたことと元に戻す方法を日記に残す。
+Claude Code（ChatGPT・Gemini・Grok・Codex・Cursor でも）を「頭はいいけど、ターミナルは触ったことがない人」向けの話し方に切り替えるスキルです。専門用語を使わない。どこを押せばいいかを言う。1 手ずつ進める。インストール・削除・課金・公開の前には必ず止まって聞く。そして、変えたことと元に戻す方法を日記に残す。
 
 中身は 1 ファイルだけ：[`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md)。600 語以内。スクリプトもサーバーもありません。
 
@@ -106,10 +106,27 @@ claude plugin install i-am-not-a-developer@i-am-not-a-developer
 
 ## 対応しているエージェント
 
+### ChatGPT・Gemini・Grok（チャットアプリ）
+
+[`install/short.txt`](install/short.txt) の文章をすべてコピーして（1,309文字。下のどのアプリにも入ります）、次の場所に貼り付けます:
+
+| アプリ | 貼る場所 | 文字数の上限 |
+| --- | --- | --- |
+| ChatGPT | **設定** → **パーソナライズ** → **カスタム指示** の「回答方法」の欄 | 1,500文字（無料）、5,000文字（有料） |
+| Gemini | **Gem を表示** → **Gem を作成** → **カスタム指示** の欄 → **保存**。以降はその Gem で会話する | 長くても大丈夫 |
+| Grok | **設定** → **カスタマイズ** →「Grok にどう答えてほしいか」の欄 | 4,000文字 |
+
+メニュー名は 2026年9月時点のものです。アプリの更新でよく変わるので、見つからないときは似た名前を探してください。貼り付けた後は、新しい会話すべてでこのルールが使われます（Gemini はその Gem での会話だけ）。
+
+チャットアプリはあなたのパソコンを直接操作できないため、作業は代わりにやらず、1手ずつ案内する形になります。
+
+### コーディングエージェント
+
 | エージェント | 方法 |
 | --- | --- |
 | Claude Code | プラグイン（上記）、または [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex など `AGENTS.md` を読むエージェント | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → プロジェクトのフォルダの `AGENTS.md` |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → プロジェクトのフォルダの `GEMINI.md` |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | `SKILL.md` を読めるもの全般 | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 

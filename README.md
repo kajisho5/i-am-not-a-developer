@@ -12,7 +12,7 @@
 
 **Your coding agent, for people who have never opened a terminal.**
 
-A skill that makes Claude Code (or Codex, or Cursor) treat you like a smart person who has never used a terminal. No jargon. It tells you where to click. One step at a time. It stops and asks before it installs, deletes, charges or publishes anything. And it keeps a diary of everything it changed, with a way to undo each change.
+A skill that makes Claude Code (or ChatGPT, Gemini, Grok, Codex, Cursor) treat you like a smart person who has never used a terminal. No jargon. It tells you where to click. One step at a time. It stops and asks before it installs, deletes, charges or publishes anything. And it keeps a diary of everything it changed, with a way to undo each change.
 
 One file: [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md). Under 600 words. No scripts, no servers.
 
@@ -106,10 +106,27 @@ Full transcripts from real sessions: [ERR_CONNECTION_REFUSED](docs/examples/befo
 
 ## Works with
 
+### ChatGPT, Gemini, Grok (chat apps)
+
+Copy all the text in [`install/short.txt`](install/short.txt) (1,309 characters, fits every app below) and paste it here:
+
+| App | Where to paste | Limit |
+| --- | --- | --- |
+| ChatGPT | **Settings** → **Personalization** → **Custom instructions**, in the box about how it should respond | 1,500 characters (free), 5,000 (paid) |
+| Gemini | **Explore Gems** → **New Gem** → **Instructions** → **Save**. Then chat with that Gem | Long text is fine |
+| Grok | **Settings** → **Customize** → the "how should Grok respond" box | 4,000 characters |
+
+Menu names as of September 2026; apps rename them often. From then on, every new chat follows the rules (in Gemini, every chat with that Gem).
+
+These apps can't touch your computer, so the agent gives you one step at a time instead of doing it itself.
+
+### Coding agents
+
 | Agent | How |
 | --- | --- |
 | Claude Code | Plugin (above), or [`install/CLAUDE.md.snippet`](install/CLAUDE.md.snippet) → `CLAUDE.md` |
 | Codex and other agents that read `AGENTS.md` | [`install/AGENTS.md.snippet`](install/AGENTS.md.snippet) → `AGENTS.md` in your project folder |
+| Gemini CLI | [`install/GEMINI.md.snippet`](install/GEMINI.md.snippet) → `GEMINI.md` in your project folder |
 | Cursor | [`install/cursor-rule.mdc`](install/cursor-rule.mdc) → `.cursor/rules/i-am-not-a-developer.mdc` |
 | Anything that reads `SKILL.md` | [`skills/i-am-not-a-developer/SKILL.md`](skills/i-am-not-a-developer/SKILL.md) |
 

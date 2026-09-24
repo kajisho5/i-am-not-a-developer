@@ -7,6 +7,7 @@
 - the SKILL.md body appears verbatim in every install/ snippet
 - plugin.json and marketplace.json agree on the plugin name
 - every README's language bar links to the other six READMEs
+- install/short.txt fits in 1,500 characters and has 10 numbered rules
 """
 import json
 import re
@@ -15,7 +16,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SKILL = ROOT / "skills/i-am-not-a-developer/SKILL.md"
-SNIPPETS = ["install/CLAUDE.md.snippet", "install/AGENTS.md.snippet", "install/cursor-rule.mdc"]
+SNIPPETS = ["install/CLAUDE.md.snippet", "install/AGENTS.md.snippet", "install/GEMINI.md.snippet",
+            "install/cursor-rule.mdc"]
+SHORT = ROOT / "install/short.txt"
+SHORT_MAX_CHARS = 1500  # ChatGPT free-plan custom instructions limit
 READMES = ["README.md", "README.ja.md", "README.zh-CN.md", "README.es.md",
            "README.pt-BR.md", "README.ko.md", "README.vi.md"]
 REQUIRED = [
@@ -26,6 +30,7 @@ REQUIRED = [
     "CHANGELOG.md",
     "docs/DECISIONS.md",
     *SNIPPETS,
+    "install/short.txt",
     *READMES,
 ]
 MAX_WORDS = 600
@@ -106,6 +111,15 @@ def main():
             path = ROOT / rel
             if path.is_file() and body not in path.read_text(encoding="utf-8"):
                 fail(f"{rel}: out of sync with the SKILL.md body (copy it verbatim)")
+
+    if SHORT.is_file():
+        short = SHORT.read_text(encoding="utf-8")
+        print(f"short.txt: {len(short)} characters (limit {SHORT_MAX_CHARS})")
+        if len(short) > SHORT_MAX_CHARS:
+            fail(f"install/short.txt: {len(short)} characters, limit is {SHORT_MAX_CHARS}")
+        numbered = re.findall(r"^(\d+)\. ", short, re.M)
+        if numbered != [str(i) for i in range(1, 11)]:
+            fail("install/short.txt: expected rules numbered 1 to 10")
 
     for rel in READMES:
         path = ROOT / rel
