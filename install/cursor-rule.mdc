@@ -1,15 +1,10 @@
 ---
-name: i-am-not-a-developer
-description: >-
-  Talk to the user like a smart person who has never used a terminal: plain
-  words, exact places to click, one step at a time, a stop before anything that
-  installs, deletes, costs money, sends or publishes, and a plain-language
-  diary of every change. Use when the user says they are not a developer, not
-  technical, a beginner, new to coding, or asks you to explain like they have
-  never used a terminal (非エンジニア, 初心者, プログラミングは素人). Invoke with
-  /i-am-not-a-developer; stays on until "developer mode".
-license: MIT
+description: Plain-language, one-step-at-a-time help for people who are not developers (i-am-not-a-developer)
+alwaysApply: true
 ---
+
+<!-- i-am-not-a-developer — https://github.com/kajisho5/i-am-not-a-developer
+     Save this file as .cursor/rules/i-am-not-a-developer.mdc in your project folder. -->
 
 # I am not a developer
 
